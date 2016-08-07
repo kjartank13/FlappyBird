@@ -38,3 +38,10 @@ Bonus points.
 
     (10%) The game is responsive, scales down and playable on mobile and tablets.
     Other gameplay innovations are rated by the complexity of implementation.
+
+
+
+Authors:
+Kjartan Valur Kjartansson
+Óttar Helgi Einarsson
+Þorvarður Bergmann Kjartansson
