@@ -1,0 +1,74 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title>html5 game new</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <link rel="shortcut icon" href="/favicon.ico">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- build:css styles/vendor.css -->
+        <!-- bower:css -->
+
+        <!-- endbower -->
+        <!-- endbuild -->
+        <!-- build:css(.tmp) styles/main.css -->
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- endbuild -->
+    </head>
+    <body>
+        <!--[if lt IE 10]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <div class="GameCanvas">
+            <div class="Player">
+                <div class="PlayerImage">
+                    <div class="wings"></div>
+                </div>
+            </div>
+            <div id="Cloud" class="Cloud"></div>
+            <div id="Tunnel" class="Tunnel"></div>
+             <div class="ground ground-bottom"></div>
+            
+            <div class="Scoreboard">
+                <div  class="score">
+                Score:
+                <label id="score" class="score" value=""></label> <br>
+                Best score:
+                <label id="bestscore" class="score" value=""></label> <br>
+                </div>
+                <button class="Scoreboard-restart" autofocus="autofocus">
+                    <span class="Scoreboard-restartText">Restart</span>
+                </button>
+            </div>
+        </div>
+        
+        <div>
+            <audio id="music" loop autoplay>
+                <source src="../sounds/12 - Walking In The Park With Eloise.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <button id="muteButton">Mute / Unmute</button>
+        </div>
+
+        <!-- build:js scripts/vendor.js -->
+        <!-- bower:js -->
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- build:js({app,.tmp}) scripts/main.js -->
+        <script src="scripts/main.js"></script>
+        <script src="scripts/controls.js"></script>
+        <script src="scripts/game.js"></script>
+        <script src="scripts/player.js"></script>
+        <script src="scripts/tunnel.js"></script>
+        <script src="scripts/utils.js"></script>
+        <script src="scripts/movingCloud.js"></script>
+        <!-- endbuild -->
+</body>
+</html>

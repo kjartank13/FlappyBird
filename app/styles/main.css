@@ -1,0 +1,175 @@
+.Player {
+	z-index: 20;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 6.6em;
+	height: 5em;
+    transform: translateZ(0);
+    
+}
+
+.PlayerImage {
+    position: absolute;
+	top: 0;
+	left: 0;
+	width: 6.6em;
+	height: 5em;
+    size: auto 100%;
+    background: url('../images/bird.png');
+    background-size: auto 100%;
+    transform: translateZ(0);
+}
+
+.Player-up {
+    transform: rotateZ(-30deg);
+}
+
+.Player-down {
+    transform: rotateZ(30deg);
+}
+
+.wings {
+    position: absolute;
+	top: 3em;
+	left: -0.3em;
+	width: 2.7em;
+	height: 2.3em;
+    background: url('../images/wings.png');
+    background-size: auto 100%;
+    transform: translateZ(0);
+    
+    transform-origin: top left;
+    animation: 0.4s flap alternate infinite;
+}
+
+@keyframes flap {
+    from {
+        transform: rotateX(60);
+    }
+    to {
+        transform: rotateX(120deg);
+    }
+}
+
+.Tunnel {
+    position: absolute;
+	width: 13em;
+	height: 99em;
+    background: url('../images/tunnel.png');
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    transform: translateZ(0);
+}
+
+.Cloud {
+	z-index: 0;
+	position: absolute;
+	top: 10%;
+	left: 85em;
+	width: 110em;
+	height: 45em;
+    opacity: 0.4;
+	background-image: url('../images/cloud.png');
+	background-size: 20%;
+	background-repeat: no-repeat;
+	animation-iteration-count: infinite;
+	animation-fill-mode: forwards;
+	animation-timing-function: linear;
+	animation-duration: linear;
+	transform: translateZ(0);
+}
+.ground {
+	z-index: 1;
+	position: absolute;
+	height: 7em;
+	right: -336px;
+	left: 0;
+}
+
+.ground-bottom {
+	z-index: 1;
+	bottom: 0;
+	background: url('../images/groundbar.png') repeat-x;
+	background-size: auto 100%;
+	-webkit-animation: ground;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-iteration-count: infinite;
+	transform: translateZ(0);
+}
+
+@-webkit-keyframes ground {
+	0% {
+		transform: translateZ(0) translateX(0);
+	}
+	100% {
+		transform: translateZ(0) translateX(-300px);
+	}
+}
+
+.Scoreboard {
+	z-index: 200;
+	position: absolute;
+	left: 50%;
+	top: 10em;
+	height: 30em;
+	width: 40em;
+	margin-left: -20em;
+	box-sizing: border-box;
+	background: purple;
+	text-align: center;
+	-webkit-transform: translate(0, -40em);
+	-webkit-transition: -webkit-transform 0.5s;
+}
+
+.score {
+	font-family: 'Courier', serif;
+	font-size: 2.4em;
+	color: white;	
+}
+
+/**
+* Reset transform to animate it into the correct spot on the screen.
+*/
+.Scoreboard.is-visible {
+	-webkit-transform: none;
+}
+
+.Scoreboard-restart {
+	margin-top: 10em;
+	font-size: inherit;
+	padding: 0.4em 1.5em;
+	border: 0.2em solid white;
+	background: none;
+	cursor: pointer;
+}
+.Scoreboard-restartText {
+font-family: 'Courier', serif;
+font-size: 2.4em;
+color: white;
+}
+body {
+background: black;
+}
+.browsehappy {
+margin: 0.2em 0;
+background: ?#?ccc?;
+color: #000;
+padding: 0.2em 0;
+}
+.GameCanvas {
+z-index: 0;
+font-size: 10px;
+position: absolute;
+left: 50%;
+top: 50%;
+width: 102.4em;
+height: 57.6em;
+margin-left: -51.2em;
+margin-top: -28.8em;
+overflow: hidden;
+background: url('../images/background.jpg') repeat-x;
+background-size: auto 100%;
+
+}
